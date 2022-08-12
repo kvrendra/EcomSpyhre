@@ -1,0 +1,28 @@
+<div class="card">
+  <h3 style="text-align:center">Items Group</h3>
+  <div>
+    <label>Group Name</label>
+    <input type="text" name="GroupName" [(ngModel)]="groupname" #gname="ngModel" required style="margin-left:30px">
+    <div *ngIf="gname.invalid && (gname.dirty || gname.touched)">
+      <div *ngIf="gname.errors?.['required']" style="color: rgb(233, 59, 59);">Item Name is required.</div>
+      </div>
+</div><br><br>
+
+  <div>
+    <label>Status</label>
+    <input type="text" name="groupStatus" [(ngModel)]="groupstatus" #gstatus="ngModel" required style="margin-left:70px">
+    <div *ngIf="gstatus.invalid && (gstatus.dirty || gstatus.touched)">
+      <div *ngIf="gstatus.errors?.['required']" style="color: rgb(233, 59, 59);">Item Group is required.</div>
+      </div>
+  </div><br><br>
+  <div><button class="btn btn-primary" (click)="sub1()">Submit</button></div>
+
+
+</div>
+
+
+
+
+
+
+

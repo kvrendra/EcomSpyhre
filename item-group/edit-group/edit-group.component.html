@@ -1,0 +1,38 @@
+<div style="margin-left:800px;margin-top:250px;border-style:solid; border-color: black;margin-right:700px;"><h1 mat-dialog-title style="text-align:center">Edit Price Details</h1>
+
+
+
+
+
+
+  <div mat-dialog-content>
+
+    <table>
+
+      <tr>
+          <td><label>Item Group ID</label> </td>
+          <td><input type="text" name="ipdIId"[(ngModel)]="groupID" style="border-radius:4px; margin-left:5px"></td>
+      </tr><br>
+      <tr>
+          <td><label>Item Group Name</label></td>
+          <td><input type="text" name="ipdMrp" [(ngModel)]="groupName" style="border-radius:4px; margin-left:5px"></td>
+      </tr><br>
+      <tr>
+          <td><label>Item Group Status</label></td>
+          <td><input type="text" name="ipdMarketPrice" [(ngModel)]="groupStatus" style="border-radius:4px; margin-left:5px"></td>
+      </tr><br>
+      <tr>
+          <td> <label>Time Stamp</label> </td>
+          <td><input type="text" name="ipdDiscount" [(ngModel)]="timeStamp" style="border-radius:4px; margin-left:5px"></td>
+      </tr><br>
+
+    </table><br><br>
+
+  </div>
+  <!--/form-->
+  <div mat-dialog-actions  style="padding:10px; text-align:center">
+      <button class="btn btn-primary" mat-button mat-dialog-submit   style="margin-right:5px;" (click)="postingUpdated()" >Update</button>
+    <!--button  class="btn btn-primary" mat-button mat-dialog-close >Close</button-->
+  </div>
+</div>
+

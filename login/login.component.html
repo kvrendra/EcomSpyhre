@@ -1,0 +1,106 @@
+<!--div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v14.0" nonce="6PZEUtHc"></script>
+
+<div style="background-color:#948567;padding-top:300px; padding-bottom: 600px;">
+
+
+    <div style="background-color: white; width:350px;height:300px; margin-left: 790px; padding:20px; padding-top:50px; border-radius: 20px;">
+        <div style="text-align:center;">
+                <h3>Member Login</h3>
+                <form [formGroup]="form1">
+                <input type="text" placeholder="Username" name="uname" class="mb-2" style="width:70%; border-radius:10px; border-width: 0.5px;" formControlName="uname" required ><br>
+                <input type="password" placeholder="Password" name="password"  class="mb-4" style="width:70%; border-radius:10px; border-width: 0.5px;" required  formControlName="password" ><br>
+                <button class="btn-success mb-2" style="width:70%; border-radius:20px;"(click)="login1()">Sign in</button><br>
+                <button style="width:70%; border-radius:20px;">Forgot Password</button>
+                <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div>
+            </form>
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+</div-->
+
+
+
+
+
+<div id="logreg-forms">
+    <form [formGroup]="form1" class="form-signin">
+          <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign in</h1>
+          <input type="text" id="inputEmail"  placeholder="Username" name="uname" class="form-control"  formControlName="uname" required=""  autofocus="">
+          <input type="password" id="inputPassword" placeholder="Password" name="password"  class="form-control"  required="" formControlName="password" autofocus=""><br>
+          <!--button class="btn-success mb-2" style="width:70%; border-radius:20px;"(click)="login1()">Sign in</button><br>
+           <input type="email" id="inputEmail" class="form-control" placeholder="Username" required="" autofocus="">
+          <input type="password" id="inputPassword" class="form-control" placeholder="Password" required=""-->
+    </form>
+          <button class="btn btn-success btn-block form-signin" type="submit"  (click)="login1()"><i class="fas fa-sign-in-alt"></i> Login</button>
+          <a href="#" id="forgot_pswd">Forgot password?</a>
+          <hr>
+          <!-- <p>Don't have an account!</p>>
+          <button class="btn btn-primary btn-block" type="button" id="btn-signup"><i class="fas fa-user-plus"></i> Sign up New Account</button-->
+
+
+          <form action="/reset/password/" class="form-reset">
+              <input type="email" id="resetEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+              <button class="btn btn-primary btn-block" type="submit">Reset Password</button>
+              <a href="#" id="cancel_reset"><i class="fas fa-angle-left"></i> Back</a>
+          </form>
+          <p style="text-align:center"> OR  </p>
+
+          <div class="social-login">
+            <button class="btn facebook-btn social-btn" type="button"><span><i class="fab fa-facebook-f"></i> Sign in with Facebook</span> </button>
+            <button class="btn google-btn social-btn" type="button" #loginRef><span><i class="fab fa-google-plus-g"></i> Sign in with Google+</span> </button>
+        </div>
+
+          <!--form action="/signup/" class="form-signup">
+              <div class="social-login">
+                  <button class="btn facebook-btn social-btn" type="button"><span><i class="fab fa-facebook-f"></i> Sign up with Facebook</span> </button>
+              </div>
+              <div class="social-login">
+                  <button class="btn google-btn social-btn" type="button"><span><i class="fab fa-google-plus-g"></i> Sign up with Google+</span> </button>
+              </div>
+
+              <p style="text-align:center">OR</p>
+
+              <input type="text" id="user-name" class="form-control" placeholder="Full name" required="" autofocus="">
+              <input type="email" id="user-email" class="form-control" placeholder="Email address" required autofocus="">
+              <input type="password" id="user-pass" class="form-control" placeholder="Password" required autofocus="">
+              <input type="password" id="user-repeatpass" class="form-control" placeholder="Repeat Password" required autofocus="">
+
+              <button class="btn btn-primary btn-block" type="submit"><i class="fas fa-user-plus"></i> Sign Up</button>
+              <a href="#" id="cancel_signup"><i class="fas fa-angle-left"></i> Back</a>
+          </form-->
+          <br>
+
+  </div>
+  <p style="text-align:center">
+      <a href="http://bit.ly/2RjWFMfunction toggleResetPswd(e){
+  e.preventDefault();
+  $('#logreg-forms .form-signin').toggle() // display:block or none
+  $('#logreg-forms .form-reset').toggle() // display:block or none
+}
+
+function toggleSignUp(e){
+  e.preventDefault();
+  $('#logreg-forms .form-signin').toggle(); // display:block or none
+  $('#logreg-forms .form-signup').toggle(); // display:block or none
+}
+
+$(()=>{
+  // Login Register Form
+  $('#logreg-forms #forgot_pswd').click(toggleResetPswd);
+  $('#logreg-forms #cancel_reset').click(toggleResetPswd);
+  $('#logreg-forms #btn-signup').click(toggleSignUp);
+  $('#logreg-forms #cancel_signup').click(toggleSignUp);
+})g" target="_blank" style="color:black">Copied By me </a>
+  </p>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="/script.js"></script>
+

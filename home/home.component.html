@@ -1,0 +1,342 @@
+
+<div class="col-12">
+  <header id="header" class="fixed-top">
+  <div class="container-fluid d-flex justify-content-between align-items-center">
+    <h1 class="logo me-auto me-lg-0"><a href="/home">Spyhre Shopping</a></h1>
+
+  <nav id="navbar" class="navbar order-last order-lg-0">
+    <ul>
+      <li><a href="/home">Home</a></li>
+      <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        User
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <li><a class="dropdown-item" href="#">Add User</a></li>
+        <li><a class="dropdown-item" href="#">Edit User</a></li>
+        <li><a class="dropdown-item" href="#">View User</a></li>
+      </ul>
+    </li>
+
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Role
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <li><a class="dropdown-item" (click)="openDialog()" >Add Role</a></li>
+
+        <li><a class="dropdown-item" href="role/view-role" >View Role</a></li>
+        <!--li><a class="dropdown-item" (click)="openDialog2()">Edit Role</a></li-->
+        <li class="nav-item dropdown"> <a href="/privilage" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Privilages
+           </a>
+           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+             <li><a class="dropdown-item" (click)="open()">Add Privilage</a></li>
+             <li><a class="dropdown-item" href="/edit">Edit Privilage</a></li>
+             <li><a class="dropdown-item" href="/view">View Privilage</a></li>
+           </ul>
+         </li>
+
+      </ul>
+    </li>
+      <li>
+        <li class="nav-item dropdown">
+          <a href="#"  class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Product </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+
+            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+             ItemGroup
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="addgroup">Add Group</a></li>
+              <!--li><a class="dropdown-item" href="#">Edit Group</a></li-->
+              <li><a class="dropdown-item" href="viewgroup">View Item Group</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Item Details
+           </a>
+           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+             <li><a class="dropdown-item" href="/additem">Add Item</a></li>
+             <li><a class="dropdown-item" href="/viewitem">View Item</a></li>
+             <!--li><a class="dropdown-item" href="edit/:id">Edit Item</a></li-->
+           </ul>
+         </li>
+         <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Item Price Details
+         </a>
+         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+           <li><a class="dropdown-item" (click)="openDialogForAddPrice()">Add Price Details</a></li>
+
+           <li><a class="dropdown-item" href="/view-price">View Price Details</a></li>
+           <!--li><a class="dropdown-item" href="/edit-prices">Edit Price Details</a></li-->
+         </ul>
+       </li>
+
+
+
+
+          </ul>
+        </li>
+
+
+
+
+
+
+
+
+
+    </ul>
+    <i class="bi bi-list mobile-nav-toggle"></i>
+    <div (click)="showCart()">
+      <a style="color:red"><svg xmlns="http://www.w3.org/2000/svg"  width="24" height="24" fill="solid black" class="bi bi-cart4" style="margin-left:225px" viewBox="0 0 16 16">
+      <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+     </svg>{{this.cartArray}}</a>
+  </div>
+
+  </nav>
+  <!-- .navbar -->
+  <div></div>
+  <!-- <div class="header-social-links">
+    <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+    <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+    <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+    <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+  </div> -->
+</div>
+
+</header>
+
+
+
+<!--head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head-->
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="col-3 d-flex flex-row">
+   <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+    <a  href="/home">Catergories</a>
+    <a (click)="filterdisp('1')">Mobiles</a>
+    <a (click)="filterdisp('20')">Electronics</a>
+    <a (click)="filterdisp('21')">Fashion</a>
+    <a (click)="filterdisp('22')">Grocery</a>
+    <a (click)="filterdisp('23')">Toys</a>
+    <a (click)="filterdisp('24')">Footwear</a>
+    <a (click)="filterdisp('25')">Utensils</a>
+  </div>
+  <!--input type="text" style="width:200px; margin-left:1380px;height:40px;color:black;" placeholder="search"-->
+    <p><span  style="font-size:30px;cursor:pointer" (click)="openNav()">&#9776; Menu</span></p>
+    <div class="col-6  d-flex flex-row">
+      <div >
+      <input type="text" [(ngModel)]="searchValue" style="width:200px; margin-left:1180px; height:35px; color:black; border:solid;border-color:black"  placeholder="Search.." name="search">
+      </div>
+      <div style="margin-left:200px;">
+        <button class="btn btn-success" (click)="asendingSort()">Sort</button>
+        <!-- <select
+        onchange="
+    switch (this.value){
+      case 'tx': desendingSort(); break;
+      case 'ak': asendingSort(); break;
+
+   }
+ ">
+          <option>Sort Based on Price</option>
+          <option  value="tx" >Highest to Lowest</option>
+          <option  value="ak">Lowest to Highest</option>
+        </select> -->
+      </div>
+    </div>
+
+<!--
+    <div class="col-3  d-flex flex-row">
+
+      <select multiple="multiple" onchange="
+    switch (this.value){
+      case 'tx': funcOne(); break;
+      case 'ak': funcTwo(); break;
+      etc...
+   }
+ ">
+ <option value="tx">Texas</option>
+ <option value="ak">Alaska</option>
+ <option value="ca">California</option>
+ <option value="ws">Washington</option>
+ <option value="tn">Tennessee</option>
+</select>
+
+
+
+
+    </div> -->
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="container"  [style.display]="styledp1">
+  <div class="row"  >
+    <div class="col-2" *ngFor="let i of i4|searchbox:searchValue">
+      <div *ngFor="let j of i6">
+        <div *ngIf="i.iId==j.ipdIId">
+              <div class="card" style="padding:20px;">
+
+              <img src={{i.iImage}} style="border-radius:19px; height:180px;" (click)="singleProductDisplay(this.i)" >
+              <h3 style="text-align:center;font-weight: 700;">{{i.iName|uppercase}}</h3>
+              <div><label style="color:red;font:bold;font-weight:800;">MRP</label> <p style="color:black;font:bold;font-weight:800;"> {{j.ipdMrp}}</p></div>
+              <div>
+                <label style="color:green;font:bold;font-weight:800;">Discounted Price</label>
+                <div class="d-flex flex-row"><p style="color:black;font:bold;font-weight:800;">{{j.ipdMarketPrice}}</p><p style="margin-left:10px ;color:blue">{{i.iDesc+" Discount"}}</p></div>
+              </div>
+          <button class="btn btn-primary" (click)="addItemsToCart(i.iId)">Add To Cart</button>
+        </div><br>
+    </div>
+
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="container" [style.display]="styledp">
+  <div class="row"  >
+    <div class="col-2" *ngFor="let i of filtereditems|searchbox:searchValue" >
+      <div *ngFor="let j of i6">
+        <!--div *ngIf="i.iIgId==groupId"-->
+         <div *ngIf="i.iId==j.ipdIId">
+          <div class="card" style="padding:20px;">
+                    <img src={{i.iImage}} style="border-radius:19px; height:180px;" (click)="singleProductDisplay(this.i)">
+                    <h3 style="text-align:center;font-weight: 700;">{{i.iName|uppercase}}</h3>
+                    <div><label  style="color:red;font:bold;font-weight:800;">MRP</label><p style="color:black;font:bold;font-weight:800;">{{j.ipdMrp}}</p></div>
+                    <div><label style="color:green;font:bold;font-weight:800;">Discounted Price</label></div>
+                    <div class="d-flex flex-row"><p style="color:black;font:bold;font-weight:800;">{{j.ipdMarketPrice}}</p><p style="margin-left:10px ;color:blue">{{i.iDesc+" Discount"}}</p></div>
+                    <button class="btn btn-primary" (click)="addItemsToCart(i.iId)">Add To Cart</button>
+                  </div><br>
+            </div>
+        <!--/div-->
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" [style.display]="styledpSort">
+  <div class="row"  >
+
+      <div class="col-2" *ngFor="let i of filtereditems" >
+        <div *ngFor="let j of i4|searchbox:searchValue">
+
+        <!--div *ngIf="i.iIgId==groupId"-->
+         <div *ngIf="j.iId==i.ipdIId">
+          <div class="card" style="padding:20px;">
+                    <img src={{j.iImage}} style="border-radius:19px; height:180px;" (click)="singleProductDisplay(this.j)">
+                    <h3 style="text-align:center;font-weight: 700;">{{j.iName|uppercase}}</h3>
+                    <div><label  style="color:red;font:bold;font-weight:800;">MRP</label><p style="color:black;font:bold;font-weight:800;">{{i.ipdMrp}}</p></div>
+                    <div><label style="color:green;font:bold;font-weight:800;">Discounted Price</label></div>
+                    <div class="d-flex flex-row"><p style="color:black;font:bold;font-weight:800;">{{i.ipdMarketPrice}}</p><p style="margin-left:10px ;color:blue">{{j.iDesc+" Discount"}}</p></div>
+              <button class="btn btn-primary" (click)="addItemsToCart(j.iId)">Add To Cart</button>
+                  </div><br>
+            </div>
+        <!--/div-->
+      </div>
+    </div>
+  </div>
+</div>
+
+<div [style.display]="single">
+<div>
+  <div class=" container" style="margin-top:auto;margin-left:auto;">
+      <div class="row">
+        <div class="card col-md-4" >
+            <img [src]="singleProduct.iImage" style="width:150px;height:180px"><br>
+            <label ><b> Product : </b></label>
+            <p>{{singleProduct!.iName}}</p><br>
+            <label ><b> MRP : </b></label>
+            <p>{{display1.ipdMrp}}</p><br>
+            <label ><b> Discount : </b></label>
+            <p>{{singleProduct!.iDesc}}</p><br>
+            <label ><b> Starting Date : </b></label>
+            <p>{{display1.ipdStartDate}}</p><br>
+            <label ><b> Ending Date : </b></label>
+            <p>{{display1.ipdEndDate}}</p><br>
+            <div>
+            <a class=" btn btn-danger" (click)="addItemsToCart(singleProduct.iId)" > Add To Cart</a>
+            <a class=" btn btn-info" style="margin-left:20px" (click)="backshop()"> Back To Shopping</a>
+          </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<div [style.display]="cartItemsDisplay" >
+  <section class="vh-100" >
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col">
+          <p><span class="h2">Shopping Cart </span><span class="h4">({{this.cartArray}} item in your cart)</span></p>
+
+          <div class="card mb-4">
+            <div class="card-body p-4">
+
+              <div class="row align-items-center" *ngFor="let list of cartArray">
+                 <div *ngFor="let y of i4">
+                  <div *ngFor="let x of i6">
+                  <div *ngIf="y.iId==list">
+                    <div  *ngIf="x.ipdIId==list">
+
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th scope="col">Image</th>
+                          <th scope="col">MRP</th>
+                          <th scope="col">Discount</th>
+                          <th scope="col">Market price</th>
+                          <th scope="col">Total Price</th>
+                          <th scope="col">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><img [src]="y.iImage" width=120 height=120></td>
+                          <td>{{x.ipdMrp}}</td>
+                           <td>{{y.iDesc}}</td>
+                          <td>{{x.ipdMarketPrice}}</td>
+                          <td>{{x.ipdMarketPrice}}</td>
+                          <td><button class="btn btn-danger" (click)="deleteFromCart(list)" >Delete</button></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                 </div>
+                </div>
+              </div>
+              </div>
+              </div>
+             </div>
+              </div>
+              </div>
+          <div class="d-flex justify-content-end">
+            <button type="button" class="btn btn-light btn-lg me-2" (click)="backshop()">Continue shopping</button>
+            <button type="button" class="btn btn-primary btn-lg">Add to cart</button>
+          </div>
+
+
+      </div>
+    </div>
+  </section>
+  </div>
+

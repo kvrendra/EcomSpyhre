@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>Add Role</h1>
+<div mat-dialog-content>
+  <label>Role Name</label>  <input type="text" name="rolename" [(ngModel)]="rolename" style="border-radius:4px; margin-left:5px"><br><br>
+  <label>Role Status</label> <input type="text" name="rolestatus" [(ngModel)]="rolestatus" style="border-radius:4px;margin-left:5px;">
+    
+</div>
+<div mat-dialog-actions  style="padding:10px;">
+    <button class="btn btn-primary" mat-button mat-dialog-submit (click)="rolesub()"   style="margin-right:5px;">Submit</button>
+  <button  class="btn btn-primary" mat-button mat-dialog-close >Close</button>
+</div>
+

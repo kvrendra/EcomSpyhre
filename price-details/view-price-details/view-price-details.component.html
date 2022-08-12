@@ -1,0 +1,43 @@
+<table  class="table table-striped" style="width:70%;margin-left:280px;text-align:center;">
+    <thead> <tr>
+     <th>ID</th>
+     <th>Item ID</th>
+     <th>MRP</th>
+
+     <th>Discount</th>
+     <th>MarketPrice</th>
+     <th>OfferStart</th>
+     <th>Offer End</th>
+     <th>Time Stamp</th>
+     <th>Edit/Delete</th>
+ </tr>
+ </thead>
+
+  <tbody>
+  <tr *ngFor="let a of viewPriceData">
+     <td>{{a.ipdId}}</td>
+     <td>{{a.ipdIId}}</td>
+     <td>{{a.ipdMrp}}</td>
+
+     <td>{{a.ipdDiscount}}</td>
+     <td>{{a.ipdMarketPrice}}</td>
+     <td>{{a.ipdStartDate}}</td>
+     <td>{{a.ipdEndDate}}</td>
+     <td>{{a.ipdTs}}</td>
+
+
+  <td><div><i class="bi bi-pen-fill" routerLink='/edit-price/{{a.ipdId}}'></i><span> / </span><i class="bi bi-trash-fill" (click)="deleteByID(a.ipdId)"></i></div></td>
+
+ </tr>
+ </tbody>
+
+
+
+
+
+
+
+
+ </table>
+
+ <div style="text-align:center"><button class="btn btn-primary" routerLink="/home">Back Home</button></div>

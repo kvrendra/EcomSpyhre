@@ -1,0 +1,25 @@
+<table  class="table table-striped" style="width:70%;margin-left:280px;text-align:center;">
+   <thead> <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Status</th>
+    <th>TimeStamp</th>
+    <th>Edit/Delete</th>
+</tr>
+</thead>
+
+ <tbody>
+ <tr *ngFor="let a of roles">
+    <td>{{a.arId}}</td>
+    <td>{{a.arName}}</td>
+    <td>{{a.arStatus}}</td>
+    <td>{{a.arTs}}</td>
+    <td><div><i class="bi bi-pen-fill" routerLink='/edit-role/{{a.arId}}'></i>
+      <span> / </span>
+      <i class="bi bi-trash-fill" (click)="deleteById(a.arId)"></i></div></td>
+
+</tr>
+</tbody>
+</table>
+
+<div style="text-align:center"><button class="btn btn-primary" routerLink="/home">Back Home</button></div>

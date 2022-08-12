@@ -1,0 +1,15 @@
+<h1 >ADD PRIVILAGE</h1>
+<form [formGroup]="prvgForm">
+
+<label>ID</label>
+<input type="number" class="form-control" formControlName="roleid"><br>
+
+
+<label>STATUS</label>
+<select class="form-control" formControlName="status">
+        <option class="form-control">Y</option>
+        <option class="form-control">N</option></select><br>
+
+</form>
+<input type="submit" class="btn btn-primary" value="Add Role" (click)="AddPrvg()">
+

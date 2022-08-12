@@ -1,0 +1,42 @@
+<div class="card">
+<form [formGroup]="itemform">
+  <h2 style="align-items:center;">AddItem</h2>
+  <div class="mb-3">
+   <input class="form-control mb-3" placeholder="Item Name" formControlName='itemname'>
+      <div *ngIf="itemform.controls['itemname'].invalid && (itemform.controls['itemname'].dirty || itemform.controls['itemname'].touched)">
+      <div *ngIf="itemform.controls['itemname'].errors?.['required']" style="color: rgb(233, 59, 59);">Item Name is required.</div>
+      </div>
+</div>
+<div class="mb-3">
+  <input class="form-control mb-3" placeholder="Item Discount" formControlName='itemDesc'>
+      <div *ngIf="itemform.controls['itemDesc'].invalid && (itemform.controls['itemDesc'].dirty || itemform.controls['itemDesc'].touched)">
+      <div *ngIf="itemform.controls['itemDesc'].errors?.['required']" style="color: rgb(233, 59, 59);">ItemDiscount is required.</div>
+      </div>
+</div>
+<div class="mb-3">
+  <select class="form-select form-control" aria-label="Default select example" formControlName="itemstatus">
+      <option value="" disabled selected hidden>Item Status</option>
+      <option >Y</option>
+      <option >N</option>
+  </select>
+  <div *ngIf="itemform .controls['itemstatus'].invalid && (itemform.controls['itemstatus'].dirty || itemform.controls['itemstatus'].touched)">
+  <div *ngIf="itemform.controls['itemstatus'].errors?.['required']"style=" color: rgb(233, 59, 59);"> Item Status is required</div>
+  </div>
+</div>
+</form>
+
+<div class="mb-3">
+ <div class=>
+  <div class="d-flex flex-column align-items-center text-center p-2 py-4 ">
+    <img [src]="url" width="275" >
+      <input type="file" style="display:none" (change)="selectFile($event)" #input >
+      <button type="button" (click)="input.click()" style="background-color:darkblue;color:white">Browse</button>
+      <span class="font-weight-bold"></span><span class="text-black-50"></span><span></span></div>
+  </div>
+ </div>
+<div class="footer">
+    <button type="button" class="btn btn-primary" (click)="items()">Save</button>
+</div>
+
+
+</div>

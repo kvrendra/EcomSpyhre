@@ -1,0 +1,80 @@
+<h1 mat-dialog-title>Add Price Details</h1>
+
+
+<div >
+
+
+
+
+
+<div mat-dialog-content  class="">
+  <!--label>Item Details ID</label>  <input type="text" name="ipdIId"[(ngModel)]="prodDetailsID" style="border-radius:4px; margin-left:5px"><br><br>
+  <label>Item Product Mrp</label>  <input type="text" name="ipdMrp" [(ngModel)]="mrp" style="border-radius:4px; margin-left:5px"><br><br>
+  <label>Item Product MarketPrice</label>  <input type="text" name="ipdMarketPrice" [(ngModel)]="marketprice" style="border-radius:4px; margin-left:5px"><br><br>
+  <label>Item Product Discount</label>  <input type="text" name="ipdDiscount" [(ngModel)]="discount" style="border-radius:4px; margin-left:5px"><br><br>
+  <label>Item Product Start date</label>  <input type="date" name="ipdStartDate" [(ngModel)]="start" style="border-radius:4px; margin-left:5px"><br><br>
+  <label>Item Product End date </label>  <input type="date" name="ipdEndDate" [(ngModel)]="end" style="border-radius:4px; margin-left:5px"><br><br>
+  <label>Item Product Status</label>  <input type="text" name="ipdStatus"  [(ngModel)]="status"  style="border-radius:4px; margin-left:5px"><br><br-->
+
+
+  <table>
+
+    <tr>
+     <td> <label>Item Details ID</label></td>
+     <td><input type="text" name="ipdIId"[(ngModel)]="prodDetailsID" style="border-radius:4px; margin-left:5px"></td>
+
+    </tr>
+    <br>
+    <tr>
+      <td> <label>Item Product Mrp</label></td>
+      <td><input type="text" name="ipdMrp" [(ngModel)]="mrp" style="border-radius:4px; margin-left:5px"></td>
+
+     </tr>
+     <br>
+
+     <tr>
+       <td> <label>Item Product Discount</label></td>
+       <td><input type="text" name="ipdDiscount" [(ngModel)]="discount" style="border-radius:4px; margin-left:5px"></td>
+
+      </tr><br>
+      <!--tr>
+        <td> <label>Item Product MarketPrice</label></td>
+        <td><input type="text" name="ipdMarketPrice" [(ngModel)]="marketprice"  style="border-radius:4px; margin-left:5px"></td>
+
+       </tr><br-->
+      <tr>
+        <td> <label>Item Product Start date</label></td>
+        <td> <input type="date" name="ipdStartDate" [(ngModel)]="start" style="border-radius:4px; margin-left:5px; width:100%;"></td>
+
+       </tr><br>
+       <tr>
+         <td> <label>Item Product End date</label></td>
+         <td><input type="date" name="ipdEndDate" [(ngModel)]="end" style="border-radius:4px; margin-left:5px; width:100%;"></td>
+
+        </tr><br>
+        <tr>
+          <td> <label>Item Product Status</label></td>
+          <td> <input type="text" name="ipdStatus"  [(ngModel)]="status"  style="border-radius:4px; margin-left:5px"></td>
+
+         </tr><br>
+
+
+  </table>
+
+
+</div>
+
+<div mat-dialog-actions  style="padding:10px; text-align:center;">
+    <button class="btn btn-primary" mat-button mat-dialog-submit (click)="postPriceDetailsData()"    style="margin-right:5px;">Submit</button>
+
+ </div>
+ <div mat-dialog-actions  style="padding:10px; text-align:center;">
+  <button class="btn btn-primary" mat-button mat-dialog-submit [routerLink]="['/view-price']" routerLinkActive="router-link-active"     style="margin-right:5px;">Go to View</button>
+</div>
+
+</div>
+
+
+
+
+
